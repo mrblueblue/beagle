@@ -39,7 +39,7 @@ defmodule Beagle.Mixfile do
 
   defp description do
    """
-   Add-ons for the Hound, the integration testing and browser automation library
+   Add-ons for Hound, the integration testing and browser automation library
    """
  end
 
