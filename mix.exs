@@ -34,7 +34,10 @@ defmodule Beagle.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    [{:hound, "~> 1.0"}]
+    [
+      {:hound, "~> 1.0"},
+      {:ex_doc, ">= 0.0.0", only: :dev}
+    ]
   end
 
   defp description do
@@ -46,7 +49,7 @@ defmodule Beagle.Mixfile do
  defp package do
    # These are the default files included in the package
    [
-     name: :postgrex,
+     name: :beagle,
      files: ["lib", "mix.exs", "README*", "LICENSE*"],
      maintainers: ["Jonathan Huang"],
      licenses: ["MIT"],
