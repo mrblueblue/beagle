@@ -33,6 +33,11 @@ defmodule Beagle.Helpers do
     Hound.RequestUtils.make_req(:post, "session/#{session_id}/buttonup", %{button: button})
   end
 
+  def doubleclick do
+    session_id = Hound.current_session_id
+    Hound.RequestUtils.make_req(:post, "session/#{session_id}/doubleclick")
+  end
+
   defp get_element({strategy, selector}),
     do: Hound.Helpers.Page.find_element(strategy, selector)
 
