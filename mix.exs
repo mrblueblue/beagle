@@ -35,7 +35,7 @@ defmodule Beagle.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      {:hound, "~> 1.0"},
+      {:hound, github: "mrblueblue/hound"},
       {:ex_doc, ">= 0.0.0", only: :dev}
     ]
   end

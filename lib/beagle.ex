@@ -17,22 +17,6 @@ defmodule Beagle.Helpers do
     end
   end
 
-  def move_to(element, xoffset, yoffset) do
-    element = get_element(element)
-    session_id = Hound.current_session_id
-    Hound.RequestUtils.make_req(:post, "session/#{session_id}/moveto", %{element: element.uuid, xoffset: xoffset, yoffset: yoffset})
-  end
-
-  def mouse_down(button \\ 0) do
-    session_id = Hound.current_session_id
-    Hound.RequestUtils.make_req(:post, "session/#{session_id}/buttondown", %{button: button})
-  end
-
-  def mouse_up(button \\ 0) do
-    session_id = Hound.current_session_id
-    Hound.RequestUtils.make_req(:post, "session/#{session_id}/buttonup", %{button: button})
-  end
-
   def doubleclick do
     session_id = Hound.current_session_id
     Hound.RequestUtils.make_req(:post, "session/#{session_id}/doubleclick")
